@@ -1,0 +1,15 @@
+# Ignore Python/Django environment files
+*.pyc
+__pycache__/
+db.sqlite3
+
+# Environment & secrets
+.env
+
+# VSCode or PyCharm IDE settings (optional)
+.vscode/
+.idea/
+
+# Virtual environments
+venv/
+env/
