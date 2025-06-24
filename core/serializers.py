@@ -1,6 +1,6 @@
 from rest_framework import serializers
 from django.contrib.auth.models import User
-from .models import Product, Cart, Order, OrderItem  # ✅ Include OrderItem
+from .models import Product, Cart, Order, OrderItem  
 
 class UserSerializer(serializers.ModelSerializer):
     password = serializers.CharField(write_only=True)
@@ -25,7 +25,7 @@ class CartSerializer(serializers.ModelSerializer):
         fields = '__all__'
 
 
-# ✅ New OrderItem Serializer (for order product breakdown)
+
 class OrderItemSerializer(serializers.ModelSerializer):
     product_name = serializers.CharField(source='product.name', read_only=True)
 
